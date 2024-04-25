@@ -1,0 +1,333 @@
+/*  This database provides the data for my small Etsy sweatshirt shop called The Cozy Cowbelle and how the product data relates to the orders I received and the customers who made those orders. */
+
+CREATE TABLE products (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT,
+    color TEXT,
+    size TEXT, 
+    price INTEGER);
+    
+INSERT INTO products VALUES (1, "Antler", "maroon", "small", "39.99");
+INSERT INTO products VALUES (2, "Antler", "navy", "small", "39.99");
+INSERT INTO products VALUES (3, "Antler", "sand", "small", "39.99");
+INSERT INTO products VALUES (4, "Antler", "sport grey", "small", "39.99");
+INSERT INTO products VALUES (5, "Antler", "white", "small", "39.99");
+INSERT INTO products VALUES (6, "Antler", "black", "small", "39.99");
+INSERT INTO products VALUES (7, "Antler", "maroon", "medium", "39.99");
+INSERT INTO products VALUES (8, "Antler", "navy", "medium", "39.99");
+INSERT INTO products VALUES (9, "Antler", "sand", "medium", "39.99");
+INSERT INTO products VALUES (10, "Antler", "sport grey", "medium", "39.99");
+INSERT INTO products VALUES (11, "Antler", "white", "medium", "39.99");
+INSERT INTO products VALUES (12, "Antler", "black", "medium", "39.99");
+INSERT INTO products VALUES (13, "Antler", "maroon", "large", "39.99");
+INSERT INTO products VALUES (14, "Antler", "navy", "large", "39.99");
+INSERT INTO products VALUES (15, "Antler", "sand", "large", "39.99");
+INSERT INTO products VALUES (16, "Antler", "sport grey", "large", "39.99");
+INSERT INTO products VALUES (17, "Antler", "white", "large", "39.99");
+INSERT INTO products VALUES (18, "Antler", "black", "large", "39.99");
+INSERT INTO products VALUES (19, "Antler", "maroon", "x-large", "39.99");
+INSERT INTO products VALUES (20, "Antler", "navy", "x-large", "39.99");
+INSERT INTO products VALUES (21, "Antler", "sand", "x-large", "39.99");
+INSERT INTO products VALUES (22, "Antler", "sport grey", "x-large", "39.99");
+INSERT INTO products VALUES (23, "Antler", "white", "x-large", "39.99");
+INSERT INTO products VALUES (24, "Antler", "black", "x-large", "39.99");
+INSERT INTO products VALUES (25, "Antler", "maroon", "xx-large", "41.99");
+INSERT INTO products VALUES (26, "Antler", "navy", "xx-large", "41.99");
+INSERT INTO products VALUES (27, "Antler", "sand", "xx-large", "41.99");
+INSERT INTO products VALUES (28, "Antler", "sport grey", "xx-large", "41.99");
+INSERT INTO products VALUES (29, "Antler", "white", "xx-large", "41.99");
+INSERT INTO products VALUES (30, "Antler", "black", "xx-large", "41.99");
+INSERT INTO products VALUES (31, "Antler", "maroon", "3x-large", "43.99");
+INSERT INTO products VALUES (32, "Antler", "navy", "3x-large", "43.99");
+INSERT INTO products VALUES (33, "Antler", "sand", "3x-large", "43.99");
+INSERT INTO products VALUES (34, "Antler", "sport grey", "3x-large", "43.99");
+INSERT INTO products VALUES (35, "Antler", "white", "3x-large", "43.99");
+INSERT INTO products VALUES (36, "Antler", "black", "3x-large", "43.99");
+INSERT INTO products VALUES (37, "Antler", "maroon", "4x-large", "45.99");
+INSERT INTO products VALUES (38, "Antler", "navy", "4x-large", "45.99");
+INSERT INTO products VALUES (39, "Antler", "sand", "4x-large", "45.99");
+INSERT INTO products VALUES (40, "Antler", "sport grey", "4x-large", "45.99");
+INSERT INTO products VALUES (41, "Antler", "white", "4x-large", "45.99");
+INSERT INTO products VALUES (42, "Antler", "black", "4x-large", "45.99");
+INSERT INTO products VALUES (43, "Antler", "maroon", "5x-large", "47.99");
+INSERT INTO products VALUES (44, "Antler", "navy", "5x-large", "47.99");
+INSERT INTO products VALUES (45, "Antler", "sand", "5x-large", "47.99");
+INSERT INTO products VALUES (46, "Antler", "sport grey", "5x-large", "47.99");
+INSERT INTO products VALUES (47, "Antler", "white", "5x-large", "47.99");
+INSERT INTO products VALUES (48, "Antler", "black", "5x-large", "47.99");
+INSERT INTO products VALUES (49, "Lashes and Coffee", "maroon", "small", "39.99");
+INSERT INTO products VALUES (50, "Lashes and Coffee", "navy", "small", "39.99");
+INSERT INTO products VALUES (51, "Lashes and Coffee", "sand", "small", "39.99");
+INSERT INTO products VALUES (52, "Lashes and Coffee", "sport grey", "small", "39.99");
+INSERT INTO products VALUES (53, "Lashes and Coffee", "white", "small", "39.99");
+INSERT INTO products VALUES (54, "Lashes and Coffee", "black", "small", "39.99");
+INSERT INTO products VALUES (55, "Lashes and Coffee", "maroon", "medium", "39.99");
+INSERT INTO products VALUES (56, "Lashes and Coffee", "navy", "medium", "39.99");
+INSERT INTO products VALUES (57, "Lashes and Coffee", "sand", "medium", "39.99");
+INSERT INTO products VALUES (58, "Lashes and Coffee", "sport grey", "medium", "39.99");
+INSERT INTO products VALUES (59, "Lashes and Coffee", "white", "medium", "39.99");
+INSERT INTO products VALUES (60, "Lashes and Coffee", "black", "medium", "39.99");
+INSERT INTO products VALUES (61, "Lashes and Coffee", "maroon", "large", "39.99");
+INSERT INTO products VALUES (62, "Lashes and Coffee", "navy", "large", "39.99");
+INSERT INTO products VALUES (63, "Lashes and Coffee", "sand", "large", "39.99");
+INSERT INTO products VALUES (64, "Lashes and Coffee", "sport grey", "large", "39.99");
+INSERT INTO products VALUES (65, "Lashes and Coffee", "white", "large", "39.99");
+INSERT INTO products VALUES (66, "Lashes and Coffee", "black", "large", "39.99");
+INSERT INTO products VALUES (67, "Lashes and Coffee", "maroon", "x-large", "39.99");
+INSERT INTO products VALUES (68, "Lashes and Coffee", "navy", "x-large", "39.99");
+INSERT INTO products VALUES (69, "Lashes and Coffee", "sand", "x-large", "39.99");
+INSERT INTO products VALUES (70, "Lashes and Coffee", "sport grey", "x-large", "39.99");
+INSERT INTO products VALUES (71, "Lashes and Coffee", "white", "x-large", "39.99");
+INSERT INTO products VALUES (72, "Lashes and Coffee", "black", "x-large", "39.99");
+INSERT INTO products VALUES (73, "Lashes and Coffee", "maroon", "xx-large", "41.99");
+INSERT INTO products VALUES (74, "Lashes and Coffee", "navy", "xx-large", "41.99");
+INSERT INTO products VALUES (75, "Lashes and Coffee", "sand", "xx-large", "41.99");
+INSERT INTO products VALUES (76, "Lashes and Coffee", "sport grey", "xx-large", "41.99");
+INSERT INTO products VALUES (77, "Lashes and Coffee", "white", "xx-large", "41.99");
+INSERT INTO products VALUES (78, "Lashes and Coffee", "black", "xx-large", "41.99");
+INSERT INTO products VALUES (79, "Lashes and Coffee", "maroon", "3x-large", "43.99");
+INSERT INTO products VALUES (80, "Lashes and Coffee", "navy", "3x-large", "43.99");
+INSERT INTO products VALUES (81, "Lashes and Coffee", "sand", "3x-large", "43.99");
+INSERT INTO products VALUES (82, "Lashes and Coffee", "sport grey", "3x-large", "43.99");
+INSERT INTO products VALUES (83, "Lashes and Coffee", "white", "3x-large", "43.99");
+INSERT INTO products VALUES (84, "Lashes and Coffee", "black", "3x-large", "43.99");
+INSERT INTO products VALUES (85, "Lashes and Coffee", "maroon", "4x-large", "45.99");
+INSERT INTO products VALUES (86, "Lashes and Coffee", "navy", "4x-large", "45.99");
+INSERT INTO products VALUES (87, "Lashes and Coffee", "sand", "4x-large", "45.99");
+INSERT INTO products VALUES (88, "Lashes and Coffee", "sport grey", "4x-large", "45.99");
+INSERT INTO products VALUES (89, "Lashes and Coffee", "white", "4x-large", "45.99");
+INSERT INTO products VALUES (90, "Lashes and Coffee", "black", "4x-large", "45.99");
+INSERT INTO products VALUES (91, "Lashes and Coffee", "maroon", "5x-large", "47.99");
+INSERT INTO products VALUES (92, "Lashes and Coffee", "navy", "5x-large", "47.99");
+INSERT INTO products VALUES (93, "Lashes and Coffee", "sand", "5x-large", "47.99");
+INSERT INTO products VALUES (94, "Lashes and Coffee", "sport grey", "5x-large", "47.99");
+INSERT INTO products VALUES (95, "Lashes and Coffee", "white", "5x-large", "47.99");
+INSERT INTO products VALUES (96, "Lashes and Coffee", "black", "5x-large", "47.99");
+INSERT INTO products VALUES (97, "Horseshoes", "maroon", "small", "39.99");
+INSERT INTO products VALUES (98, "Horseshoes", "navy", "small", "39.99");
+INSERT INTO products VALUES (99, "Horseshoes", "sand", "small", "39.99");
+INSERT INTO products VALUES (100, "Horseshoes", "sport grey", "small", "39.99");
+INSERT INTO products VALUES (101, "Horseshoes", "white", "small", "39.99");
+INSERT INTO products VALUES (102, "Horseshoes", "black", "small", "39.99");
+INSERT INTO products VALUES (103, "Horseshoes", "maroon", "medium", "39.99");
+INSERT INTO products VALUES (104, "Horseshoes", "navy", "medium", "39.99");
+INSERT INTO products VALUES (105, "Horseshoes", "sand", "medium", "39.99");
+INSERT INTO products VALUES (106, "Horseshoes", "sport grey", "medium", "39.99");
+INSERT INTO products VALUES (107, "Horseshoes", "white", "medium", "39.99");
+INSERT INTO products VALUES (108, "Horseshoes", "black", "medium", "39.99");
+INSERT INTO products VALUES (109, "Horseshoes", "maroon", "large", "39.99");
+INSERT INTO products VALUES (110, "Horseshoes", "navy", "large", "39.99");
+INSERT INTO products VALUES (111, "Horseshoes", "sand", "large", "39.99");
+INSERT INTO products VALUES (112, "Horseshoes", "sport grey", "large", "39.99");
+INSERT INTO products VALUES (113, "Horseshoes", "white", "large", "39.99");
+INSERT INTO products VALUES (114, "Horseshoes", "black", "large", "39.99");
+INSERT INTO products VALUES (115, "Horseshoes", "maroon", "x-large", "39.99");
+INSERT INTO products VALUES (116, "Horseshoes", "navy", "x-large", "39.99");
+INSERT INTO products VALUES (117, "Horseshoes", "sand", "x-large", "39.99");
+INSERT INTO products VALUES (118, "Horseshoes", "sport grey", "x-large", "39.99");
+INSERT INTO products VALUES (119, "Horseshoes", "white", "x-large", "39.99");
+INSERT INTO products VALUES (120, "Horseshoes", "black", "x-large", "39.99");
+INSERT INTO products VALUES (121, "Horseshoes", "maroon", "xx-large", "41.99");
+INSERT INTO products VALUES (122, "Horseshoes", "navy", "xx-large", "41.99");
+INSERT INTO products VALUES (123, "Horseshoes", "sand", "xx-large", "41.99");
+INSERT INTO products VALUES (124, "Horseshoes", "sport grey", "xx-large", "41.99");
+INSERT INTO products VALUES (125, "Horseshoes", "white", "xx-large", "41.99");
+INSERT INTO products VALUES (126, "Horseshoes", "black", "xx-large", "41.99");
+INSERT INTO products VALUES (127, "Horseshoes", "maroon", "3x-large", "43.99");
+INSERT INTO products VALUES (128, "Horseshoes", "navy", "3x-large", "43.99");
+INSERT INTO products VALUES (129, "Horseshoes", "sand", "3x-large", "43.99");
+INSERT INTO products VALUES (130, "Horseshoes", "sport grey", "3x-large", "43.99");
+INSERT INTO products VALUES (131, "Horseshoes", "white", "3x-large", "43.99");
+INSERT INTO products VALUES (132, "Horseshoes", "black", "3x-large", "43.99");
+INSERT INTO products VALUES (133, "Horseshoes", "maroon", "4x-large", "45.99");
+INSERT INTO products VALUES (134, "Horseshoes", "navy", "4x-large", "45.99");
+INSERT INTO products VALUES (135, "Horseshoes", "sand", "4x-large", "45.99");
+INSERT INTO products VALUES (136, "Horseshoes", "sport grey", "4x-large", "45.99");
+INSERT INTO products VALUES (137, "Horseshoes", "white", "4x-large", "45.99");
+INSERT INTO products VALUES (138, "Horseshoes", "black", "4x-large", "45.99");
+INSERT INTO products VALUES (139, "Horseshoes", "maroon", "5x-large", "47.99");
+INSERT INTO products VALUES (140, "Horseshoes", "navy", "5x-large", "47.99");
+INSERT INTO products VALUES (141, "Horseshoes", "sand", "5x-large", "47.99");
+INSERT INTO products VALUES (142, "Horseshoes", "sport grey", "5x-large", "47.99");
+INSERT INTO products VALUES (143, "Horseshoes", "white", "5x-large", "47.99");
+INSERT INTO products VALUES (144, "Horseshoes", "black", "5x-large", "47.99");
+INSERT INTO products VALUES (145, "Fried Pickles", "maroon", "small", "39.99");
+INSERT INTO products VALUES (146, "Fried Pickles", "navy", "small", "39.99");
+INSERT INTO products VALUES (147, "Fried Pickles", "sand", "small", "39.99");
+INSERT INTO products VALUES (148, "Fried Pickles", "sport grey", "small", "39.99");
+INSERT INTO products VALUES (149, "Fried Pickles", "white", "small", "39.99");
+INSERT INTO products VALUES (150, "Fried Pickles", "black", "small", "39.99");
+INSERT INTO products VALUES (151, "Fried Pickles", "maroon", "medium", "39.99");
+INSERT INTO products VALUES (152, "Fried Pickles", "navy", "medium", "39.99");
+INSERT INTO products VALUES (153, "Fried Pickles", "sand", "medium", "39.99");
+INSERT INTO products VALUES (154, "Fried Pickles", "sport grey", "medium", "39.99");
+INSERT INTO products VALUES (155, "Fried Pickles", "white", "medium", "39.99");
+INSERT INTO products VALUES (156, "Fried Pickles", "black", "medium", "39.99");
+INSERT INTO products VALUES (157, "Fried Pickles", "maroon", "large", "39.99");
+INSERT INTO products VALUES (158, "Fried Pickles", "navy", "large", "39.99");
+INSERT INTO products VALUES (159, "Fried Pickles", "sand", "large", "39.99");
+INSERT INTO products VALUES (160, "Fried Pickles", "sport grey", "large", "39.99");
+INSERT INTO products VALUES (161, "Fried Pickles", "white", "large", "39.99");
+INSERT INTO products VALUES (162, "Fried Pickles", "black", "large", "39.99");
+INSERT INTO products VALUES (163, "Fried Pickles", "maroon", "x-large", "39.99");
+INSERT INTO products VALUES (164, "Fried Pickles", "navy", "x-large", "39.99");
+INSERT INTO products VALUES (165, "Fried Pickles", "sand", "x-large", "39.99");
+INSERT INTO products VALUES (166, "Fried Pickles", "sport grey", "x-large", "39.99");
+INSERT INTO products VALUES (167, "Fried Pickles", "white", "x-large", "39.99");
+INSERT INTO products VALUES (168, "Fried Pickles", "black", "x-large", "39.99");
+INSERT INTO products VALUES (169, "Fried Pickles", "maroon", "xx-large", "41.99");
+INSERT INTO products VALUES (170, "Fried Pickles", "navy", "xx-large", "41.99");
+INSERT INTO products VALUES (171, "Fried Pickles", "sand", "xx-large", "41.99");
+INSERT INTO products VALUES (172, "Fried Pickles", "sport grey", "xx-large", "41.99");
+INSERT INTO products VALUES (173, "Fried Pickles", "white", "xx-large", "41.99");
+INSERT INTO products VALUES (174, "Fried Pickles", "black", "xx-large", "41.99");
+INSERT INTO products VALUES (175, "Fried Pickles", "maroon", "3x-large", "43.99");
+INSERT INTO products VALUES (176, "Fried Pickles", "navy", "3x-large", "43.99");
+INSERT INTO products VALUES (177, "Fried Pickles", "sand", "3x-large", "43.99");
+INSERT INTO products VALUES (178, "Fried Pickles", "sport grey", "3x-large", "43.99");
+INSERT INTO products VALUES (179, "Fried Pickles", "white", "3x-large", "43.99");
+INSERT INTO products VALUES (180, "Fried Pickles", "black", "3x-large", "43.99");
+INSERT INTO products VALUES (181, "Fried Pickles", "maroon", "4x-large", "45.99");
+INSERT INTO products VALUES (182, "Fried Pickles", "navy", "4x-large", "45.99");
+INSERT INTO products VALUES (183, "Fried Pickles", "sand", "4x-large", "45.99");
+INSERT INTO products VALUES (184, "Fried Pickles", "sport grey", "4x-large", "45.99");
+INSERT INTO products VALUES (185, "Fried Pickles", "white", "4x-large", "45.99");
+INSERT INTO products VALUES (186, "Fried Pickles", "black", "4x-large", "45.99");
+INSERT INTO products VALUES (187, "Fried Pickles", "maroon", "5x-large", "47.99");
+INSERT INTO products VALUES (188, "Fried Pickles", "navy", "5x-large", "47.99");
+INSERT INTO products VALUES (189, "Fried Pickles", "sand", "5x-large", "47.99");
+INSERT INTO products VALUES (190, "Fried Pickles", "sport grey", "5x-large", "47.99");
+INSERT INTO products VALUES (191, "Fried Pickles", "white", "5x-large", "47.99");
+INSERT INTO products VALUES (192, "Fried Pickles", "black", "5x-large", "47.99");
+INSERT INTO products VALUES (193, "Meowdy", "maroon", "small", "39.99");
+INSERT INTO products VALUES (194, "Meowdy", "navy", "small", "39.99");
+INSERT INTO products VALUES (195, "Meowdy", "sand", "small", "39.99");
+INSERT INTO products VALUES (196, "Meowdy", "sport grey", "small", "39.99");
+INSERT INTO products VALUES (197, "Meowdy", "white", "small", "39.99");
+INSERT INTO products VALUES (198, "Meowdy", "black", "small", "39.99");
+INSERT INTO products VALUES (199, "Meowdy", "maroon", "medium", "39.99");
+INSERT INTO products VALUES (200, "Meowdy", "navy", "medium", "39.99");
+INSERT INTO products VALUES (201, "Meowdy", "sand", "medium", "39.99");
+INSERT INTO products VALUES (202, "Meowdy", "sport grey", "medium", "39.99");
+INSERT INTO products VALUES (203, "Meowdy", "white", "medium", "39.99");
+INSERT INTO products VALUES (204, "Meowdy", "black", "medium", "39.99");
+INSERT INTO products VALUES (205, "Meowdy", "maroon", "large", "39.99");
+INSERT INTO products VALUES (206, "Meowdy", "navy", "large", "39.99");
+INSERT INTO products VALUES (207, "Meowdy", "sand", "large", "39.99");
+INSERT INTO products VALUES (208, "Meowdy", "sport grey", "large", "39.99");
+INSERT INTO products VALUES (209, "Meowdy", "white", "large", "39.99");
+INSERT INTO products VALUES (210, "Meowdy", "black", "large", "39.99");
+INSERT INTO products VALUES (211, "Meowdy", "maroon", "x-large", "39.99");
+INSERT INTO products VALUES (212, "Meowdy", "navy", "x-large", "39.99");
+INSERT INTO products VALUES (213, "Meowdy", "sand", "x-large", "39.99");
+INSERT INTO products VALUES (214, "Meowdy", "sport grey", "x-large", "39.99");
+INSERT INTO products VALUES (215, "Meowdy", "white", "x-large", "39.99");
+INSERT INTO products VALUES (216, "Meowdy", "black", "x-large", "39.99");
+INSERT INTO products VALUES (217, "Meowdy", "maroon", "xx-large", "41.99");
+INSERT INTO products VALUES (218, "Meowdy", "navy", "xx-large", "41.99");
+INSERT INTO products VALUES (219, "Meowdy", "sand", "xx-large", "41.99");
+INSERT INTO products VALUES (220, "Meowdy", "sport grey", "xx-large", "41.99");
+INSERT INTO products VALUES (221, "Meowdy", "white", "xx-large", "41.99");
+INSERT INTO products VALUES (222, "Meowdy", "black", "xx-large", "41.99");
+INSERT INTO products VALUES (223, "Meowdy", "maroon", "3x-large", "43.99");
+INSERT INTO products VALUES (224, "Meowdy", "navy", "3x-large", "43.99");
+INSERT INTO products VALUES (225, "Meowdy", "sand", "3x-large", "43.99");
+INSERT INTO products VALUES (226, "Meowdy", "sport grey", "3x-large", "43.99");
+INSERT INTO products VALUES (227, "Meowdy", "white", "3x-large", "43.99");
+INSERT INTO products VALUES (228, "Meowdy", "black", "3x-large", "43.99");
+INSERT INTO products VALUES (229, "Meowdy", "maroon", "4x-large", "45.99");
+INSERT INTO products VALUES (230, "Meowdy", "navy", "4x-large", "45.99");
+INSERT INTO products VALUES (231, "Meowdy", "sand", "4x-large", "45.99");
+INSERT INTO products VALUES (232, "Meowdy", "sport grey", "4x-large", "45.99");
+INSERT INTO products VALUES (233, "Meowdy", "white", "4x-large", "45.99");
+INSERT INTO products VALUES (234, "Meowdy", "black", "4x-large", "45.99");
+INSERT INTO products VALUES (235, "Meowdy", "maroon", "5x-large", "47.99");
+INSERT INTO products VALUES (236, "Meowdy", "navy", "5x-large", "47.99");
+INSERT INTO products VALUES (237, "Meowdy", "sand", "5x-large", "47.99");
+INSERT INTO products VALUES (238, "Meowdy", "sport grey", "5x-large", "47.99");
+INSERT INTO products VALUES (239, "Meowdy", "white", "5x-large", "47.99");
+INSERT INTO products VALUES (240, "Meowdy", "black", "5x-large", "47.99");
+INSERT INTO products VALUES (241, "Small Town Mama", "maroon", "small", "39.99");
+INSERT INTO products VALUES (242, "Small Town Mama", "navy", "small", "39.99");
+INSERT INTO products VALUES (243, "Small Town Mama", "sand", "small", "39.99");
+INSERT INTO products VALUES (244, "Small Town Mama", "sport grey", "small", "39.99");
+INSERT INTO products VALUES (245, "Small Town Mama", "white", "small", "39.99");
+INSERT INTO products VALUES (246, "Small Town Mama", "black", "small", "39.99");
+INSERT INTO products VALUES (247, "Small Town Mama", "maroon", "medium", "39.99");
+INSERT INTO products VALUES (248, "Small Town Mama", "navy", "medium", "39.99");
+INSERT INTO products VALUES (249, "Small Town Mama", "sand", "medium", "39.99");
+INSERT INTO products VALUES (250, "Small Town Mama", "sport grey", "medium", "39.99");
+INSERT INTO products VALUES (251, "Small Town Mama", "white", "medium", "39.99");
+INSERT INTO products VALUES (252, "Small Town Mama", "black", "medium", "39.99");
+INSERT INTO products VALUES (253, "Small Town Mama", "maroon", "large", "39.99");
+INSERT INTO products VALUES (254, "Small Town Mama", "navy", "large", "39.99");
+INSERT INTO products VALUES (255, "Small Town Mama", "sand", "large", "39.99");
+INSERT INTO products VALUES (256, "Small Town Mama", "sport grey", "large", "39.99");
+INSERT INTO products VALUES (257, "Small Town Mama", "white", "large", "39.99");
+INSERT INTO products VALUES (258, "Small Town Mama", "black", "large", "39.99");
+INSERT INTO products VALUES (259, "Small Town Mama", "maroon", "x-large", "39.99");
+INSERT INTO products VALUES (260, "Small Town Mama", "navy", "x-large", "39.99");
+INSERT INTO products VALUES (261, "Small Town Mama", "sand", "x-large", "39.99");
+INSERT INTO products VALUES (262, "Small Town Mama", "sport grey", "x-large", "39.99");
+INSERT INTO products VALUES (263, "Small Town Mama", "white", "x-large", "39.99");
+INSERT INTO products VALUES (264, "Small Town Mama", "black", "x-large", "39.99");
+INSERT INTO products VALUES (265, "Small Town Mama", "maroon", "xx-large", "41.99");
+INSERT INTO products VALUES (266, "Small Town Mama", "navy", "xx-large", "41.99");
+INSERT INTO products VALUES (267, "Small Town Mama", "sand", "xx-large", "41.99");
+INSERT INTO products VALUES (268, "Small Town Mama", "sport grey", "xx-large", "41.99");
+INSERT INTO products VALUES (269, "Small Town Mama", "white", "xx-large", "41.99");
+INSERT INTO products VALUES (270, "Small Town Mama", "black", "xx-large", "41.99");
+INSERT INTO products VALUES (271, "Small Town Mama", "maroon", "3x-large", "43.99");
+INSERT INTO products VALUES (272, "Small Town Mama", "navy", "3x-large", "43.99");
+INSERT INTO products VALUES (273, "Small Town Mama", "sand", "3x-large", "43.99");
+INSERT INTO products VALUES (274, "Small Town Mama", "sport grey", "3x-large", "43.99");
+INSERT INTO products VALUES (275, "Small Town Mama", "white", "3x-large", "43.99");
+INSERT INTO products VALUES (276, "Small Town Mama", "black", "3x-large", "43.99");
+INSERT INTO products VALUES (277, "Small Town Mama", "maroon", "4x-large", "45.99");
+INSERT INTO products VALUES (278, "Small Town Mama", "navy", "4x-large", "45.99");
+INSERT INTO products VALUES (279, "Small Town Mama", "sand", "4x-large", "45.99");
+INSERT INTO products VALUES (280, "Small Town Mama", "sport grey", "4x-large", "45.99");
+INSERT INTO products VALUES (281, "Small Town Mama", "white", "4x-large", "45.99");
+INSERT INTO products VALUES (282, "Small Town Mama", "black", "4x-large", "45.99");
+INSERT INTO products VALUES (283, "Small Town Mama", "maroon", "5x-large", "47.99");
+INSERT INTO products VALUES (284, "Small Town Mama", "navy", "5x-large", "47.99");
+INSERT INTO products VALUES (285, "Small Town Mama", "sand", "5x-large", "47.99");
+INSERT INTO products VALUES (286, "Small Town Mama", "sport grey", "5x-large", "47.99");
+INSERT INTO products VALUES (287, "Small Town Mama", "white", "5x-large", "47.99");
+INSERT INTO products VALUES (288, "Small Town Mama", "black", "5x-large", "47.99");
+
+
+CREATE TABLE customers (
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	full_name TEXT,
+	phone number TEXT
+	email TEXT,
+	street_address TEXT,
+	city TEXT,
+	state TEXT,
+	zip_code TEXT)
+	
+INSERT INTO customers VALUES (1, Shannon Stemper, 
+INSERT INTO customers VALUES (2, Irina Tretera,
+INSERT INTO customers VALUES (3, Ryan Vanderheyden, 
+INSERT INTO customers VALUES (4, 
+INSERT INTO customers VALUES (5,
+INSERT INTO customers VALUES (6,
+INSERT INTO customers VALUES (7,
+
+
+CREATE TABLE orders (
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	product_id INTEGER,
+	customer_id INTEGER,
+	item_total INTEGER,
+	Item_price INTEGER)
+	
+INSERT INTO orders VALUES (1, 
+INSERT INTO orders VALUES (2, 
+INSERT INTO orders VALUES (3,
+INSERT INTO orders VALUES (4, 
+INSERT INTO orders VALUES (5,
+INSERT INTO orders VALUES (6,
+INSERT INTO orders VALUES (7,
+
