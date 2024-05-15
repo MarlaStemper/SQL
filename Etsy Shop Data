@@ -498,7 +498,7 @@ CREATE TABLE customers (
 	zip_code TEXT
 	email TEXT)
 	
-INSERT INTO customers VALUES (1, irinaf123, irina finney, 101 e 11th ave, escondido, CA, 92025, irinaf123@gmail.com)
+INSERT INTO customers VALUES (1, irina finney, 101 e 11th ave, escondido, CA, 92025, irinaf123@gmail.com)
 INSERT INTO customers VALUES (2, Sydney Castellanos, 3211 River Lodge Trail S Unit 1237, Fort Worth, TX, 76116, sgcastella@gmail.com)
 INSERT INTO customers VALUES (3, Ryan Vanderheyden, 20809 Anza Ave Apt 213, Torrance, CA, 90503, vandiland.com@gmail.com)
 INSERT INTO customers VALUES (4, shannon stemper, 2753 bristlewood drive, ramona, CA, 92065, shannonstemp@cox.net)
