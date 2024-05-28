@@ -1,7 +1,7 @@
-/*  This database provides the data for my small Etsy sweatshirt shop called The Cozy Cowbelle and how the product data relates to the orders I received and the customers who made those orders. */
+--This database provides the data for my small Etsy sweatshirt shop and how the product data relates to the orders I received and the customers who made those orders.
 
 CREATE TABLE products (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    id INTEGER PRIMARY KEY,
     name TEXT,
     color TEXT,
     size TEXT, 
@@ -490,38 +490,67 @@ INSERT INTO products VALUES (480, "Cactus", "black", "5x-large", "47.99");
 
 
 CREATE TABLE customers (
-	customer_id INTEGER PRIMARY KEY AUTOINCREMENT,
+	customer_id INTEGER PRIMARY KEY,
 	full_name TEXT,
 	street_address TEXT,
 	city TEXT,
 	state TEXT,
-	zip_code TEXT
-	email TEXT)
+	zip_code TEXT,
+	email_address TEXT);
 	
-INSERT INTO customers VALUES (1, irina finney, 101 e 11th ave, escondido, CA, 92025, irinaf123@gmail.com)
-INSERT INTO customers VALUES (2, Sydney Castellanos, 3211 River Lodge Trail S Unit 1237, Fort Worth, TX, 76116, sgcastella@gmail.com)
-INSERT INTO customers VALUES (3, Ryan Vanderheyden, 20809 Anza Ave Apt 213, Torrance, CA, 90503, vandiland.com@gmail.com)
-INSERT INTO customers VALUES (4, shannon stemper, 2753 bristlewood drive, ramona, CA, 92065, shannonstemp@cox.net)
-INSERT INTO customers VALUES (5, Kaylene ross, 125 McMurty road, Crown Point, NY, 12928, kayross830@gmail.com)
-INSERT INTO customers VALUES (6, Jenny Schneider, 6517 Radburn Ln, Greendale, WI, 53129, jennsch76@gmail.com)
-INSERT INTO customers VALUES (7, Abigail Buck, 6786 Castlebrook Dr, Franklin, OH, 45005, almodras@gmail.com)
+INSERT INTO customers VALUES (1, irina finney, 101 e 11th ave, escondido, CA, 92025, irinaf123@gmail.com);
+INSERT INTO customers VALUES (2, Sydney Castellanos, 3211 River Lodge Trail S Unit 1237, Fort Worth, TX, 76116, sgcastella@gmail.com);
+INSERT INTO customers VALUES (3, Ryan Vanderheyden, 20809 Anza Ave Apt 213, Torrance, CA, 90503, vandiland.com@gmail.com);
+INSERT INTO customers VALUES (4, shannon stemper, 2753 bristlewood drive, ramona, CA, 92065, shannonstemp@cox.net);
+INSERT INTO customers VALUES (5, Kaylene ross, 125 McMurty road, Crown Point, NY, 12928, kayross830@gmail.com);
+INSERT INTO customers VALUES (6, Jenny Schneider, 6517 Radburn Ln, Greendale, WI, 53129, jennsch76@gmail.com);
+INSERT INTO customers VALUES (7, Abigail Buck, 6786 Castlebrook Dr, Franklin, OH, 45005, almodras@gmail.com);
 
 
 CREATE TABLE orders (
-	order_number INTEGER PRIMARY KEY,
-	order_date DATE
+	order_id INTEGER PRIMARY KEY,
+	order_date DATE,
 	product_id INTEGER,
-	customer_id INTEGER,)
+	customer_id INTEGER);
 	
-INSERT INTO orders VALUES (2824112526, 2023-03-10, 339, 1)
-INSERT INTO orders VALUES (2824112526, 2023-03-10, 5, 1)
-INSERT INTO orders VALUES (2824112526, 2023-03-10, 294, 1)
-INSERT INTO orders VALUES (2821032829, 2023-03-12, 400, 2)
-INSERT INTO orders VALUES (2821527113, 2023-03-12, 439, 3)
-INSERT INTO orders VALUES (2824202034, 2023-03-10, 256, 4)
-INSERT INTO orders VALUES (2824202034, 2023-03-10, 194, 4)
-INSERT INTO orders VALUES (2824202034, 2023-03-10, 147, 4)
-INSERT INTO orders VALUES (2846410987, 2023-04-04, 53, 1)
-INSERT INTO orders VALUES (3123435870, 2023-12-02, 9, 5)
-INSERT INTO orders VALUES (3265802771, 2023-4-13, 130, 6)
-INSERT INTO orders VALUES (3282061450, 2023-04-25, 13, 7)
+INSERT INTO orders VALUES (2824112526, 2023-03-10, 339, 1);
+INSERT INTO orders VALUES (2824112526, 2023-03-10, 5, 1);
+INSERT INTO orders VALUES (2824112526, 2023-03-10, 294, 1);
+INSERT INTO orders VALUES (2821032829, 2023-03-12, 400, 2);
+INSERT INTO orders VALUES (2821527113, 2023-03-12, 439, 3);
+INSERT INTO orders VALUES (2824202034, 2023-03-10, 256, 4);
+INSERT INTO orders VALUES (2824202034, 2023-03-10, 194, 4);
+INSERT INTO orders VALUES (2824202034, 2023-03-10, 147, 4);
+INSERT INTO orders VALUES (2846410987, 2023-04-04, 53, 1);
+INSERT INTO orders VALUES (3123435870, 2023-12-02, 9, 5);
+INSERT INTO orders VALUES (3265802771, 2024-04-13, 130, 6);
+INSERT INTO orders VALUES (3282061450, 2024-04-25, 13, 7);
+
+--Pulling data from the products table:
+--Display all distinct names of sweatshirts sorted alphabetically. This is helpful to know how many different designs the shop is currently selling and therefore what styles they can expand on.
+SELECT DISTINCT name AS Sweatshirt_Name
+FROM products
+ORDER BY Sweatshirt_Name ASC;
+
+--Display all the information for the sweatshirts that are white and size small. This query can be used to check that pricing is standard throughout each product combination. All small white sweatshirts should be the same price, all x-large black sweatshirts should be the same price, all 5-xlarge sport grey sweatshirts should be the same price, so on and so forth.
+SELECT *
+FROM products
+WHERE color = 'white' AND size = 'small';
+
+--Pulling data from te customers table:
+--Display the customers full name, full address in one column and email address. This would help create a simplified mailing list for ease of use and/or for easy printing.
+SELECT full_name AS Customer_Name, CONCAT(street_address, ',', city, ',', state, ' ', zip_code) AS Address, email_address AS Email
+FROM customers;
+
+--Display how many customers reside in each state. This query helps show what states could use more targeted marketing strategies to drive more revenue more evenly throughout the US.
+SELECT state, COUNT(customer_id) AS number_of_customers
+FROM customers
+GROUP BY state;
+
+--Pulling data from the orders table:
+--Display how many times each customer has made an order. This query can be used to determine the repeat customers that can be rewarded with shop discounts, or to determine the customers that need an extra discount to persuade them into becoming a repeat customer.
+SELECT customer_id, COUNT(customer_id) AS number_of_orders
+FROM orders
+GROUP BY customer_id;
+
+--Display which customers place orders during each month, creating new columns for each month spelled out. This would help show the purchaing trends of each customer based on each month of the year. The data can be used to determine the peak purchasing months per customer as well as per month overall.
