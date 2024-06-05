@@ -490,7 +490,7 @@ INSERT INTO products VALUES (480, "Cactus", "black", "5x-large", "47.99");
 
 
 CREATE TABLE customers (
-	customer_id INTEGER PRIMARY KEY,
+	id INTEGER PRIMARY KEY,
 	full_name TEXT,
 	street_address TEXT,
 	city TEXT,
@@ -508,7 +508,7 @@ INSERT INTO customers VALUES (7, Abigail Buck, 6786 Castlebrook Dr, Franklin, OH
 
 
 CREATE TABLE orders (
-	order_id INTEGER PRIMARY KEY,
+	id INTEGER PRIMARY KEY,
 	order_date DATE,
 	product_id INTEGER,
 	customer_id INTEGER);
@@ -553,4 +553,23 @@ SELECT customer_id, COUNT(customer_id) AS number_of_orders
 FROM orders
 GROUP BY customer_id;
 
---Display which customers place orders during each month, creating new columns for each month spelled out. This would help show the purchaing trends of each customer based on each month of the year. The data can be used to determine the peak purchasing months per customer as well as per month overall.
+--Display 2023 fiscal quarter during which each order was placed and the name of each customer who made the purchase. This would help show the purchaing trends of each customer based on each time of the 2023 year. The data can be used to determine the peak purchasing quarter and the ones that need extra marketing/sales. 
+SELECT c.full_name, o.id, o.order_date, 
+CASE 
+	WHEN o.order_date BETWEEN 2023-01-01 AND 2023-03-31 THEN 'Quarter 1'
+	WHEN o.order_date BETWEEN 2023-04-01 AND 2023-06-30 THEN 'Quarter 2'
+	WHEN o.order_date BETWEEN 2023-07-01 AND 2023-09-30 THEN 'Quarter 3'
+	ELSE 'Quarter 4'
+END AS fiscal_quarter
+FROM customers c
+JOIN orders o ON c.id = o.customer_id
+ORDER BY fiscal_quarter, o.order_date, o.id, c.full_name;
+
+--Display totals of each order, before sales tax.
+SELECT o.id, SUM(p.price) AS order_total
+FROM orders o
+JOIN products p ON o.product_id = p.id
+GROUP BY o.id
+ORDER BY o.id ASC;
+
+
