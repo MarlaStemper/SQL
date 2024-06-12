@@ -1,4 +1,5 @@
---This database provides the data for my small Etsy sweatshirt shop and how the product data relates to the orders I received and the customers who made those orders.
+--Below you will find a database created from scratch consisting of three separate tables using a sample of the data from my small Etsy sweatshirt shop. These tables provide the information for the products sold, the customers that have placed orders, and the details of those orders.
+--After the creation of the tables, I have come up with some prompts and queries that generate easy-to-read reports. These reports both simplify the data for someone who's not as familiar with SQL as well as answer some business questions that provide insight for the shop to use to further its success.
 
 CREATE TABLE products (
     id INTEGER PRIMARY KEY,
@@ -537,7 +538,7 @@ SELECT *
 FROM products
 WHERE color = 'white' AND size = 'small';
 
---Pulling data from te customers table:
+--Pulling data from the customers table:
 --Display the customers full name, full address in one column and email address. This would help create a simplified mailing list for ease of use and/or for easy printing.
 SELECT full_name AS Customer_Name, CONCAT(street_address, ',', city, ',', state, ' ', zip_code) AS Address, email_address AS Email
 FROM customers;
@@ -572,4 +573,13 @@ JOIN products p ON o.product_id = p.id
 GROUP BY o.id
 ORDER BY o.id ASC;
 
+--Edit information in the customers table to make the data style more consistent throughout. Specifically capitalizing names, addresses and cities where they are not already properly capitalized.
+UPDATE customers
+SET full_name = 'Irina Finney', street_adderess = '101 E 11th Ave', city = 'Escondido'
+WHERE customers.id = 1;
 
+UPDATE customers
+SET full_name = 'Shannon Stemper', street_adderess = '2753 Bristlewood Drive', city = 'Ramona'
+WHERE customers.id = 4;
+
+--Thank you so much for taking the time to look through my personal SQL project and I hope you liked what you saw! Feel free to reach out to me with any questions you may have. Best Regards, Marla Stemper.
